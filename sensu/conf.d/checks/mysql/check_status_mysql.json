@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "check_status_mysql": {
+      "command": "mysql-alive.rb -h :::mysql.host::: -u :::mysql.user::: -p :::mysql.password::: -P :::mysql.port::: -d :::mysql.database:::",
+      "subscribers": [
+        "mysql"
+      ],
+      "handlers": [
+        "mailer"
+      ],
+      "interval": 60,
+      "occurrences": 3,
+      "custom_summary": "MySQLのステータス監視"
+    }
+  }
+}

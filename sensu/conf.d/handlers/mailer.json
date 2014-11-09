@@ -1,0 +1,8 @@
+{
+  "mailer": {
+    "admin_gui": "http://admin.example.com:8080/",
+    "mail_from": "sensu@example.com",
+    "mail_to": "root@localhost",
+    "smtp_enable_starttls_auto": false
+  }
+}

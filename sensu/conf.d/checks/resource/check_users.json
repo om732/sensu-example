@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "check_users": {
+      "command": "check-users.sh -w :::resource.users_warn::: -c :::resource.users_crit:::",
+      "subscribers": [
+        "resource"
+      ],
+      "handlers": [
+        "mailer"
+      ],
+      "interval": 60,
+      "occurrences": 3,
+      "custom_summary": "ログインユーザ数の監視"
+    }
+  }
+}

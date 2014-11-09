@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "check_load": {
+      "command": "check-load.rb -p -w :::resource.load_warn::: -c :::resource.load_crit:::",
+      "subscribers": [
+        "resource"
+      ],
+      "handlers": [
+        "mailer"
+      ],
+      "interval": 60,
+      "occurrences": 3,
+      "custom_summary": "ロードアベレージの監視"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "metrics_mysql": {
+      "type": "metric",
+      "command": "mysql-graphite.rb -h :::mysql.host::: -u :::mysql.user::: -p :::mysql.password::: -P :::mysql.port:::",
+      "subscribers": [
+        "mysql"
+      ],
+      "handlers": [
+        "graphite"
+      ],
+      "interval": 60,
+      "custom_summary": "MySQLの情報取得"
+    }
+  }
+}
